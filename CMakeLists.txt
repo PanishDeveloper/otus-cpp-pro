@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.00)
+cmake_minimum_required(VERSION 3.16)
 
 set(PATCH_VERSION "1" CACHE STRING "Patch version number")
 project(helloworld VERSION 0.0.${PATCH_VERSION})
@@ -26,6 +26,7 @@ if(WITH_GTEST)
             googletest
             URL https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz
             URL_HASH SHA256=65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c
+            DOWNLOAD_EXTRACT_TIMESTAMP TRUE
     )
     FetchContent_MakeAvailable(googletest)
 

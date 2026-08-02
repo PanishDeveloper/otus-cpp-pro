@@ -15,10 +15,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
-      - run: sudo apt-get update && sudo apt-get install -y libgtest-dev
+      - run: sudo apt-get update
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DWITH_GTEST=ON
       - run: cmake --build .
       - run: cmake --build . --target test
