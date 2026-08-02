@@ -61,5 +61,6 @@ endif()
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Kirill Panishev")
 
 include(CPack)
