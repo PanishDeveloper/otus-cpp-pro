@@ -57,4 +57,14 @@ else()
     endif()
 endif()
 
+install(TARGETS helloworld_cli helloworld
+        RUNTIME DESTINATION bin
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+)
+
+set(CPACK_GENERATOR "DEB")
+set(CPACK_PACKAGE_CONTACT "you@example.com")   # обязателен для DEB
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Your Name")
+
 include(CPack)
