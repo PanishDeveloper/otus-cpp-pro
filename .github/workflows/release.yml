@@ -3,8 +3,9 @@ name: 'C++ CI'
 on:
   push:
     branches:
-      - master
+      - main
       - feature/github_actions
+      - homework01
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
 
