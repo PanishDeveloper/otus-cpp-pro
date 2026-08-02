@@ -59,4 +59,6 @@ else()
     endif()
 endif()
 
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+
 include(CPack)
