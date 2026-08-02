@@ -30,6 +30,8 @@ if(WITH_GTEST)
     )
     FetchContent_MakeAvailable(googletest)
 
+    enable_testing()
+
     add_executable(test_version test_version.cpp)
     target_compile_definitions(test_version PRIVATE PATCH_VERSION=${PATCH_VERSION})
     target_link_libraries(test_version GTest::gtest_main helloworld)
@@ -56,15 +58,5 @@ else()
         target_compile_options(test_version PRIVATE -Wall -Wextra -pedantic -Werror)
     endif()
 endif()
-
-install(TARGETS helloworld_cli helloworld
-        RUNTIME DESTINATION bin
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-)
-
-set(CPACK_GENERATOR "DEB")
-set(CPACK_PACKAGE_CONTACT "you@example.com")   # обязателен для DEB
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Your Name")
 
 include(CPack)
