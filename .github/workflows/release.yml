@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - feature/github_actions
-      - homework01
+      - 'homework*'
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
 
@@ -27,6 +27,6 @@ jobs:
         with:
           tag_name: ${{ github.run_number }}
           name: Release ${{ github.run_number }}
-          files: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
+          files: ./ip_filter-0.0.${{ github.run_number }}-Linux.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
