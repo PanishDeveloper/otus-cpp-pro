@@ -22,41 +22,26 @@ int main()
 
         std::sort(ip_pool.begin(), ip_pool.end(), std::greater<>());
 
-        // 1. Все адреса
-        for (auto ip : ip_pool)
-        {
+        for (auto ip : ip_pool) {
             print_ip(ip, std::cout);
-            std::cout <<'\n';
+            std::cout << '\n';
+        }
+        auto res1 = filter(ip_pool, 1);
+        for (auto ip : res1) {
+            print_ip(ip, std::cout);
+            std::cout << '\n';
         }
 
-        // 2. Первый байт == 1
-        for (auto ip : ip_pool)
-        {
-            if ((ip >> 24) == 1)
-            {
-                print_ip(ip, std::cout);
-                std::cout << '\n';
-            }
+        auto res2 = filter(ip_pool, 46, 70);
+        for (auto ip : res2) {
+            print_ip(ip, std::cout);
+            std::cout << '\n';
         }
-
-        // Первый == 46, второй == 70
-        for (auto ip : ip_pool)
-        {
-            if ((ip >> 24) == 46 && ((ip >> 16) & 0xFF) == 70)
-            {
-                print_ip(ip, std::cout);
-                std::cout << '\n';
-            }
-        }
-
-        // Любой байт == 46
-        for (auto ip : ip_pool)
-        {
-            if ((ip >> 24) == 46 || ((ip >> 16) & 0xFF) == 46 || ((ip >> 8) & 0xFF) == 46 || (ip & 0xFF) == 46)
-            {
-                print_ip(ip, std::cout);
-                std::cout << '\n';
-            }
+        
+        auto res3 = filter_any(ip_pool, 46);
+        for (auto ip : res3) {
+            print_ip(ip, std::cout);
+            std::cout << '\n';
         }
     }
     catch(const std::exception &e)

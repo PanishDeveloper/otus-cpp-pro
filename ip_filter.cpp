@@ -56,3 +56,41 @@ void print_ip(uint32_t ip, std::ostream& out)
 {
     out << ((ip >> 24) & 0xFF) << '.' << ((ip >> 16) & 0xFF) << '.' << ((ip >> 8) & 0xFF) << '.' << (ip & 0xFF);
 }
+
+std::vector<uint32_t> filter(const std::vector<uint32_t>& pool, uint8_t byte1, int byte2)
+{
+    std::vector<uint32_t> result;
+    result.reserve(pool.size());
+
+    if (byte2 == -1) {
+        // Фильтр только по первому байту
+        for (uint32_t ip : pool) {
+            if ((ip >> 24) == byte1) {
+                result.push_back(ip);
+            }
+        }
+    } else {
+        auto b2 = static_cast<uint8_t>(byte2); 
+        for (uint32_t ip : pool) {
+            if ((ip >> 24) == byte1 && ((ip >> 16) & 0xFF) == b2) {
+                result.push_back(ip);
+            }
+        }
+    }
+    return result;
+}
+
+std::vector<uint32_t> filter_any(const std::vector<uint32_t>& pool, uint8_t target)
+{
+    std::vector<uint32_t> result;
+    result.reserve(pool.size());
+    for (uint32_t ip : pool) {
+        if ((ip >> 24) == target ||
+            ((ip >> 16) & 0xFF) == target ||
+            ((ip >> 8) & 0xFF) == target ||
+            (ip & 0xFF) == target) {
+            result.push_back(ip);
+            }
+    }
+    return result;
+}
