@@ -27,6 +27,6 @@ jobs:
         with:
           tag_name: ${{ github.run_number }}
           name: Release ${{ github.run_number }}
-          files: ./ip_filter-0.0.${{ github.run_number }}-Linux.deb
+          files: ./allocator_demo-0.0.${{ github.run_number }}-Linux.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
