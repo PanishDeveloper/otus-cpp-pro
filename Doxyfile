@@ -1,0 +1,8 @@
+PROJECT_NAME     = "print_ip"
+OUTPUT_DIRECTORY = docs
+EXTRACT_ALL      = YES
+HAVE_DOT         = YES
+GENERATE_HTML    = YES
+INPUT            = ./
+RECURSIVE        = YES
+EXCLUDE_PATTERNS = */_deps/* */CMakeFiles/* */_CPack_Packages/* */Testing/* */docs/*

@@ -1,69 +1,18 @@
-#include <iostream>
-#include <map>
-#include <utility>
-#include "fixed_allocator.hpp"
-#include "fixed_list.hpp"
-
-static int factorial(int n)
-{
-    int res = 1;
-    for (int i = 2; i <= n; ++i) res *= i;
-    return res;
-}
+#include "print_ip.hpp"
+#include <string>
+#include <vector>
+#include <list>
+#include <tuple>
+#include <cstdint>
 
 int main()
 {
-    // 1. map со стандартным аллокатором
-    std::map<int, int> m1;
-    for (int i = 0; i < 10; ++i)
-    {
-        m1[i] = factorial(i);
-    }
-    std::cout << "std::map(std::allocator):\n";
-    for (const auto& p : m1)
-    {
-        std::cout << p.first << ". " << p.second << "\n";
-    }
-    std::cout << std::endl;
-
-    // 2. map с моим аллокатором
-    using mapAlloc = FixedAllocator<std::pair<const int, int>, 10>;
-    std::map<int, int, std::less<>, mapAlloc> m2;
-    for (int i = 0; i < 10; ++i)
-    {
-        m2[i] = factorial(i);
-    }
-    std::cout << "std::map(FixedAllocator<10>:\n";
-    for (const auto& p : m2)
-    {
-        std::cout << p.first << ". " << p.second << "\n";
-    }
-    std::cout << std::endl;
-
-    // 3. FixedList со стандартным аллокатором
-    FixedList<int> list1;
-    for (int i = 0; i < 10; ++i)
-    {
-        list1.push_back(i);
-    }
-    std::cout << "FixedList(std::allocator):\n";
-    for (int val : list1)
-    {
-        std::cout << val << ". ";
-    }
-    std::cout << "\n" << std::endl;
-
-    // 4. FixedList с моим аллокатором (10 элементов)
-    using intAlloc = FixedAllocator<int, 10>;
-    FixedList<int, intAlloc> list2;
-    for (int i = 0; i < 10; ++i)
-    {
-        list2.push_back(i);
-    }
-    std::cout << "FixedList(FixedAllocator<10>):\n";
-    for (int val : list2)
-    {
-        std::cout << val << ". ";
-    }
-    std::cout << std::endl;
+    print_ip(int8_t{-1});
+    print_ip(int16_t{0});
+    print_ip(int32_t{2130706433});
+    print_ip(int64_t{8875824491850138409LL});
+    print_ip(std::string{"Hello, World!"});
+    print_ip(std::vector<int>{100, 200, 300, 400});
+    print_ip(std::list<short>{400, 300, 200, 100});
+    print_ip(std::make_tuple(123, 456, 789, 0));
 }

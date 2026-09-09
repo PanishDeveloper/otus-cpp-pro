@@ -22,11 +22,24 @@ jobs:
       - run: cmake --build .
       - run: cmake --build . --target test
       - run: cmake --build . --target package
+      - name: Install Doxygen and Graphviz
+        run: sudo apt-get install -y doxygen graphviz
+
+      - name: Generate Doxygen documentation
+        run: doxygen Doxyfile
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/html
+          publish_branch: gh-pages
+          keep_files: false
+
       - name: Create Release and Upload Asset
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.run_number }}
           name: Release ${{ github.run_number }}
-          files: ./allocator_demo-0.0.${{ github.run_number }}-Linux.deb
+          files: ./print_ip-0.0.${{ github.run_number }}-Linux.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
