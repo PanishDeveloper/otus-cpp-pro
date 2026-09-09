@@ -1,0 +1,5 @@
+<map id="is_container&lt; T, std::void_t&lt; decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end()), typename T::value_type &gt; &gt;" name="is_container&lt; T, std::void_t&lt; decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end()), typename T::value_type &gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,5,444,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,197,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,52,245,52,245,57,211,57"/>
+</map>
