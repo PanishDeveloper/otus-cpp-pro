@@ -22,10 +22,10 @@ jobs:
       - run: cmake --build .
       - run: cmake --build . --target test
       - run: cmake --build . --target package
-      - name: Install Doxygen and Graphviz
+      - name: Install Doxyfile and Graphviz
         run: sudo apt-get install -y doxygen graphviz
 
-      - name: Generate Doxygen documentation
+      - name: Generate Doxyfile documentation
         run: doxygen Doxyfile
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -40,6 +40,6 @@ jobs:
         with:
           tag_name: ${{ github.run_number }}
           name: Release ${{ github.run_number }}
-          files: ./print_ip-0.0.${{ github.run_number }}-Linux.deb
+          files: ./editor-0.0.${{ github.run_number }}-Linux.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
