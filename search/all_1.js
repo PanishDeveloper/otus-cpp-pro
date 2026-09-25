@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['b_0',['b',['../structeditor_1_1Color.html#a4343b9d0aedaee058d33ea1ac4a472d8',1,'editor::Color']]],
+  ['beginframe_1',['beginFrame',['../classeditor_1_1IRenderer.html#af6d49012fa12b8675c45bdeff405b531',1,'editor::IRenderer']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['is_5fcontainer_0',['is_container',['../structis__container.html',1,'']]],
-  ['is_5fcontainer_3c_20t_2c_20std_3a_3avoid_5ft_3c_20decltype_28std_3a_3adeclval_3c_20t_20_3e_28_29_2ebegin_28_29_29_2c_20decltype_28std_3a_3adeclval_3c_20t_20_3e_28_29_2eend_28_29_29_2c_20typename_20t_3a_3avalue_5ftype_20_3e_20_3e_1',['is_container&lt; T, std::void_t&lt; decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end()), typename T::value_type &gt; &gt;',['../structis__container_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_01T_01_4_07_08_8bec196241ac79d642a64b7da2e6b9a17dc.html',1,'']]],
-  ['is_5ftuple_2',['is_tuple',['../structis__tuple.html',1,'']]],
-  ['is_5ftuple_3c_20std_3a_3atuple_3c_20args_2e_2e_2e_20_3e_20_3e_3',['is_tuple&lt; std::tuple&lt; Args... &gt; &gt;',['../structis__tuple_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html',1,'']]]
+  ['a_0',['a',['../structeditor_1_1Color.html#a79ea00ea8dcc9224d805caa996167010',1,'editor::Color']]],
+  ['accept_1',['accept',['../classeditor_1_1Shape.html#a7888d5d44d138ac4347fc702f4488952',1,'editor::Shape::accept()'],['../classeditor_1_1Line.html#a086c92b47ae41f8c53579986a1b225e2',1,'editor::Line::accept()'],['../classeditor_1_1Rectangle.html#a9f5d0e72cd894352b67f2f7c77a762b2',1,'editor::Rectangle::accept()'],['../classeditor_1_1Circle.html#abd87d8a7831b67d3af11a4412c6c5ee1',1,'editor::Circle::accept()'],['../classeditor_1_1Ellipse.html#a5f3e9cbeffcb31cf0e706ca105089ea9',1,'editor::Ellipse::accept()'],['../classeditor_1_1Polygon.html#afb7290d3c7e715d8b997bee50b573a19',1,'editor::Polygon::accept()']]],
+  ['addshape_2',['addShape',['../classeditor_1_1Document.html#a4e61112af6f98a58427aa4a2d772c73f',1,'editor::Document']]]
 ];
