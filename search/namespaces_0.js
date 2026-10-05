@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['editor_0',['editor',['../namespaceeditor.html',1,'']]]
+  ['sparse_0',['sparse',['../namespacesparse.html',1,'']]]
 ];

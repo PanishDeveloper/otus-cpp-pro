@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['shapeid_0',['ShapeID',['../namespaceeditor.html#ae0bf1c0ce7f179d0009e703cbda29d5e',1,'editor']]]
+  ['baseit_0',['BaseIt',['../classsparse_1_1Matrix_1_1Iterator.html#ac8708fb9fae4425b64a52c9fd7f57cfd',1,'sparse::Matrix::Iterator']]]
 ];

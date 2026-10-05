@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newdocument_0',['newDocument',['../classeditor_1_1EditorController.html#a7f571de638de99608313509ffc347a36',1,'editor::EditorController']]]
+  ['version_0',['version',['../classsparse_1_1Matrix.html#afe8dc6c73c80d04be9ecd8fd4e0a10c4',1,'sparse::Matrix']]]
 ];
