@@ -74,7 +74,7 @@ namespace sparse
             friend class Matrix;
             friend class Proxy<K - 1>;
             friend class Proxy<K + 1>;
-            Proxy(Matrix* m, std::array<int, K> idx) noexcept : m_matrix(m), m_indices(idx){}
+            Proxy(Matrix* m, const std::array<int, K>& idx) noexcept : m_matrix(m), m_indices(idx){}
 
             Matrix* m_matrix;
             std::array<int, K> m_indices;
