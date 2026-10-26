@@ -1,0 +1,9 @@
+<map id="bulk::BlockSink" name="bulk::BlockSink">
+<area shape="rect" id="Node000001" title=" " alt="" coords="161,5,284,31"/>
+<area shape="rect" id="Node000002" href="$classbulk_1_1ConsoleSink.html" title=" " alt="" coords="5,79,144,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,39,100,81,98,76,186,34"/>
+<area shape="rect" id="Node000003" href="$classbulk_1_1FileSink.html" title=" " alt="" coords="168,79,277,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,44,225,79,220,79,220,44"/>
+<area shape="rect" id="Node000004" href="$classbulk_1_1NetworkSink.html" title=" " alt="" coords="301,79,443,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="260,34,349,76,346,81,258,39"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classbulk_1_1BlockSink.html" title=" " alt="" coords="5,55,128,80"/>
+<area shape="rect" id="Node000001" href="$classbulk_1_1ConsoleSink.html" title=" " alt="" coords="177,5,316,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="126,48,198,28,200,33,128,53"/>
+<area shape="rect" id="Node000002" href="$classbulk_1_1FileSink.html" title=" " alt="" coords="192,55,301,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="141,65,192,65,192,70,141,70"/>
+<area shape="rect" id="Node000003" href="$classbulk_1_1NetworkSink.html" title=" " alt="" coords="176,104,317,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="128,81,200,101,198,106,126,86"/>
+</map>

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['baseit_0',['BaseIt',['../classsparse_1_1Matrix_1_1Iterator.html#ac8708fb9fae4425b64a52c9fd7f57cfd',1,'sparse::Matrix::Iterator']]],
-  ['begin_1',['begin',['../classsparse_1_1Matrix.html#a40f0ed76f6ac3e2ee660519d7526c707',1,'sparse::Matrix']]]
+  ['add_0',['add',['../classbulk_1_1Block.html#a8fe304d5c0a470523bb5d34af47e6bf1',1,'bulk::Block']]],
+  ['addline_1',['addLine',['../classbulk_1_1BulkProcessor.html#a12c786c8a7d796a3712585be97070e27',1,'bulk::BulkProcessor']]],
+  ['addsink_2',['addSink',['../classbulk_1_1BulkProcessor.html#a3fdee02cb7c702631ed1ba814935710a',1,'bulk::BulkProcessor']]]
 ];

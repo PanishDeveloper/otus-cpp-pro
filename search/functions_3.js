@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterator_0',['Iterator',['../classsparse_1_1Matrix_1_1Iterator.html#aaed0fe7d7c5e04f97ec3f07777933575',1,'sparse::Matrix::Iterator']]]
+  ['empty_0',['empty',['../classbulk_1_1Block.html#ac7dbed0b222bd1a50d1ea737edcba791',1,'bulk::Block']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['proxy_0',['Proxy',['../classsparse_1_1Matrix_1_1Proxy.html',1,'sparse::Matrix']]],
-  ['proxy_3c_20k_20_2d_201_20_3e_1',['Proxy&lt; K - 1 &gt;',['../classsparse_1_1Matrix_1_1Proxy.html#a4e1425c6138765b0285d528517bf18cb',1,'sparse::Matrix::Proxy']]],
-  ['proxy_3c_20k_2b1_20_3e_2',['Proxy&lt; K+1 &gt;',['../classsparse_1_1Matrix_1_1Proxy.html#ae08921d2522d551190c9c7cd956b3d69',1,'sparse::Matrix::Proxy']]]
+  ['length_5ft_0',['length_t',['../namespacebulk_1_1net.html#a389452145cea0ff30d9d1065a513b4a2',1,'bulk::net']]]
 ];

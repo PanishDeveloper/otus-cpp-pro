@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['get_0',['get',['../classsparse_1_1Matrix.html#ab5e80fd97795335709e98d24e6f93b45',1,'sparse::Matrix::get()'],['../classsparse_1_1Matrix_1_1Proxy.html#a2f66a77ed6bb2341eb305366cd94509e',1,'sparse::Matrix::Proxy::get()']]]
+  ['closesocket_0',['closeSocket',['../namespacebulk_1_1net.html#af2261e6272e32e41f9081e1029d67a77',1,'bulk::net']]],
+  ['commands_1',['commands',['../classbulk_1_1Block.html#a4d4ec11d09982c3afad0fd594e4ec42d',1,'bulk::Block']]],
+  ['consolesink_2',['ConsoleSink',['../classbulk_1_1ConsoleSink.html#aea24b62242d87062508586fbdbdc3ef7',1,'bulk::ConsoleSink']]]
 ];

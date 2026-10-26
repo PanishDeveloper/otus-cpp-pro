@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_0',['Key',['../classsparse_1_1Matrix.html#a5712213d5fc0f4875f9c7b077489a41a',1,'sparse::Matrix']]]
+  ['socket_5ft_0',['socket_t',['../namespacebulk_1_1net.html#a01b4caee7f2880fa35135c276a8c2ff4',1,'bulk::net']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['proxy_0',['Proxy',['../classsparse_1_1Matrix_1_1Proxy.html',1,'sparse::Matrix']]]
+  ['filesink_0',['FileSink',['../classbulk_1_1FileSink.html',1,'bulk']]]
 ];

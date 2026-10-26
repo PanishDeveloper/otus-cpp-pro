@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['empty_0',['empty',['../classsparse_1_1Matrix.html#a74b0a4ae4828723bdd2a70b2459fa7ee',1,'sparse::Matrix']]],
-  ['end_1',['end',['../classsparse_1_1Matrix.html#aaed973baa854be0eecbb77d3e787c90f',1,'sparse::Matrix']]]
+  ['block_0',['Block',['../classbulk_1_1Block.html#aadb878806d835dee22b93200054f13c5',1,'bulk::Block']]],
+  ['bulkprocessor_1',['BulkProcessor',['../classbulk_1_1BulkProcessor.html#adb11e1c837acdc883c86ff1ab77e9445',1,'bulk::BulkProcessor']]]
 ];

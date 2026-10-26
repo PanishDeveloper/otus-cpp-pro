@@ -1,0 +1,19 @@
+<map id="block_sink.hpp" name="block_sink.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,5,421,31"/>
+<area shape="rect" id="Node000002" href="$bulk__processor_8hpp.html" title=" " alt="" coords="455,79,602,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,34,502,76,500,81,400,38"/>
+<area shape="rect" id="Node000004" href="$test__bulk_8cpp.html" title=" " alt="" coords="529,152,638,177"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="435,24,542,43,587,57,604,67,616,77,623,97,619,118,596,153,592,150,614,116,618,97,612,80,601,71,585,62,540,48,434,29"/>
+<area shape="rect" id="Node000005" href="$console__sink_8hpp.html" title=" " alt="" coords="5,79,140,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="303,37,120,81,119,76,302,31"/>
+<area shape="rect" id="Node000006" href="$file__sink_8hpp.html" title=" " alt="" coords="165,79,269,104"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="328,39,242,81,239,76,325,34"/>
+<area shape="rect" id="Node000007" href="$network__sink_8hpp.html" title=" " alt="" coords="293,79,431,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="365,44,365,79,359,79,359,44"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title=" " alt="" coords="249,152,331,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="478,110,329,154,328,149,476,105"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="548,113,577,150,572,154,544,117"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="121,106,256,149,254,154,120,111"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="240,112,280,150,276,154,237,116"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="342,116,304,154,300,150,338,112"/>
+</map>
