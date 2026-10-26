@@ -1,4 +1,4 @@
-PROJECT_NAME     = "matrix"
+PROJECT_NAME     = "bulk"
 OUTPUT_DIRECTORY = docs
 EXTRACT_ALL      = YES
 HAVE_DOT         = YES
