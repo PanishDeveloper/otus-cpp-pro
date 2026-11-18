@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['empty_0',['empty',['../classbulk_1_1Block.html#ac7dbed0b222bd1a50d1ea737edcba791',1,'bulk::Block']]]
+  ['duplicate_5ffinder_2ehpp_0',['duplicate_finder.hpp',['../duplicate__finder_8hpp.html',1,'']]]
 ];

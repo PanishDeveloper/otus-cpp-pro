@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length_5ft_0',['length_t',['../namespacebulk_1_1net.html#a389452145cea0ff30d9d1065a513b4a2',1,'bulk::net']]]
+  ['invalidsocket_0',['invalidSocket',['../namespacebulk_1_1net.html#a4b25c0989e7aa3f2ccee912171a5712e',1,'bulk::net']]]
 ];

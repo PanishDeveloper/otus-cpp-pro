@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['sendflags_0',['sendFlags',['../namespacebulk_1_1net.html#ab7ec15fc2fee7d341de58fb9ebb5f343',1,'bulk::net']]],
-  ['setstartedat_1',['setStartedAt',['../classbulk_1_1Block.html#a3267524383ebc62f4daf6dd8dd764ff0',1,'bulk::Block']]],
-  ['size_2',['size',['../classbulk_1_1Block.html#acdfde5190617af527c7af519b7872ffa',1,'bulk::Block']]],
-  ['socket_5ft_3',['socket_t',['../namespacebulk_1_1net.html#a01b4caee7f2880fa35135c276a8c2ff4',1,'bulk::net']]],
-  ['startedat_4',['startedAt',['../classbulk_1_1Block.html#a2cfbd7d421db6d7bc1ec07631ed5c51c',1,'bulk::Block']]],
-  ['systemclock_5',['SystemClock',['../classbulk_1_1SystemClock.html',1,'bulk']]]
+  ['network_5fsink_2ehpp_0',['network_sink.hpp',['../network__sink_8hpp.html',1,'']]],
+  ['networksink_1',['NetworkSink',['../classbulk_1_1NetworkSink.html',1,'bulk::NetworkSink'],['../classbulk_1_1NetworkSink.html#a74d1864bcf5ee846fb77959b15ec859a',1,'bulk::NetworkSink::NetworkSink(std::string host, std::uint16_t port)'],['../classbulk_1_1NetworkSink.html#a1819871ebdbc327477ebfe1a3903106c',1,'bulk::NetworkSink::NetworkSink(const NetworkSink &amp;)=delete']]],
+  ['now_2',['now',['../classbulk_1_1Clock.html#ae66c5a17c792c6ad33e1c42a6b16e27b',1,'bulk::Clock::now()'],['../classbulk_1_1SystemClock.html#aa2ef93ddb95ed9e73a22edbf8a420bdc',1,'bulk::SystemClock::now()']]]
 ];

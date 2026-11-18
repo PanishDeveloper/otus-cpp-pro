@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['_7eblocksink_0',['~BlockSink',['../classbulk_1_1BlockSink.html#ad2624403dc16fb917dfe488333d5d485',1,'bulk::BlockSink']]],
-  ['_7eclock_1',['~Clock',['../classbulk_1_1Clock.html#a8f676a2a9ade8f867520c64b4c837e82',1,'bulk::Clock']]],
-  ['_7enetworksink_2',['~NetworkSink',['../classbulk_1_1NetworkSink.html#add5e147b6dd628e08287a0798127baf3',1,'bulk::NetworkSink']]]
+  ['scanner_2ehpp_0',['scanner.hpp',['../scanner_8hpp.html',1,'']]],
+  ['sendflags_1',['sendFlags',['../namespacebulk_1_1net.html#ab7ec15fc2fee7d341de58fb9ebb5f343',1,'bulk::net']]],
+  ['setstartedat_2',['setStartedAt',['../classbulk_1_1Block.html#a3267524383ebc62f4daf6dd8dd764ff0',1,'bulk::Block']]],
+  ['size_3',['size',['../classbulk_1_1Block.html#acdfde5190617af527c7af519b7872ffa',1,'bulk::Block']]],
+  ['socket_5ft_4',['socket_t',['../namespacebulk_1_1net.html#a55bb381835f59cfea57a2bb4244a32a9',1,'bulk::net']]],
+  ['startedat_5',['startedAt',['../classbulk_1_1Block.html#a2cfbd7d421db6d7bc1ec07631ed5c51c',1,'bulk::Block']]],
+  ['systemclock_6',['SystemClock',['../classbulk_1_1SystemClock.html',1,'bulk']]]
 ];
