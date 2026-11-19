@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['invalidsocket_0',['invalidSocket',['../namespacebulk_1_1net.html#a4b25c0989e7aa3f2ccee912171a5712e',1,'bulk::net']]]
+  ['ihasher_0',['IHasher',['../classIHasher.html',1,'']]],
+  ['isblockhashed_1',['isBlockHashed',['../classFileInfo.html#a77555f57c9db39aac8058d877c4825d0',1,'FileInfo']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['failures_0',['failures',['../classbulk_1_1BulkProcessor.html#a3c982f4ee086fb9a57ce6d96574ea037',1,'bulk::BulkProcessor']]],
-  ['filesink_1',['FileSink',['../classbulk_1_1FileSink.html#a0f2da0406dd9de6b208fb0958ae36c7f',1,'bulk::FileSink']]],
-  ['finish_2',['finish',['../classbulk_1_1BulkProcessor.html#a26f81bc178a7c003555931626ba82297',1,'bulk::BulkProcessor']]]
+  ['hash_0',['hash',['../classIHasher.html#a4c7559169a1d148071dc085f016657c1',1,'IHasher::hash()'],['../classCrc32Hasher.html#a1921e2f0c5ad03e02cc9679aad7a1d64',1,'Crc32Hasher::hash()'],['../classMd5Hasher.html#a1d2b9cf06640dde53c9d68c0d7fb9911',1,'Md5Hasher::hash()']]]
 ];

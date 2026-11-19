@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['duplicate_5ffinder_2ehpp_0',['duplicate_finder.hpp',['../duplicate__finder_8hpp.html',1,'']]]
+  ['exclude_5fdirs_0',['exclude_dirs',['../structScanOptions.html#ae5fd47bb2a17dc3a43e139491633808d',1,'ScanOptions']]]
 ];

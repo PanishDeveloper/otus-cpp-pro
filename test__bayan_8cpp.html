@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulk: tests/test_bayan.cpp File Reference</title>
+<title>bayan: tests/test_bayan.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bulk
+   <div id="projectname">bayan
    </div>
   </td>
  </tr>
@@ -91,6 +91,241 @@ $(function(){initNavTree('test__bayan_8cpp.html','',''); });
   <div class="headertitle"><div class="title">test_bayan.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &lt;boost/filesystem.hpp&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="hasher_8hpp_source.html">hasher.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="file__info_8hpp_source.html">file_info.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="comparator_8hpp_source.html">comparator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scanner_8hpp_source.html">scanner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="duplicate__finder_8hpp_source.html">duplicate_finder.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for test_bayan.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__bayan_8cpp__incl.png" border="0" usemap="#atests_2test__bayan_8cpp" loading="lazy" alt=""/></div>
+<map name="atests_2test__bayan_8cpp" id="atests_2test__bayan_8cpp">
+<area shape="rect" title=" " alt="" coords="423,5,580,33"/>
+<area shape="rect" title=" " alt="" coords="234,81,337,109"/>
+<area shape="poly" title=" " alt="" coords="461,35,339,78,337,73,465,32"/>
+<area shape="rect" title=" " alt="" coords="397,308,555,336"/>
+<area shape="poly" title=" " alt="" coords="502,32,481,294,476,292,498,35"/>
+<area shape="rect" title=" " alt="" coords="184,308,256,336"/>
+<area shape="poly" title=" " alt="" coords="492,34,244,299,241,295,487,32"/>
+<area shape="rect" href="hasher_8hpp.html" title=" " alt="" coords="280,308,373,336"/>
+<area shape="poly" title=" " alt="" coords="499,31,465,133,434,198,395,262,358,300,355,296,391,258,429,196,460,131,496,35"/>
+<area shape="rect" href="file__info_8hpp.html" title=" " alt="" coords="571,232,672,260"/>
+<area shape="poly" title=" " alt="" coords="504,31,519,100,534,143,554,183,571,203,592,223,586,222,567,207,550,186,529,145,514,102,502,36"/>
+<area shape="rect" href="comparator_8hpp.html" title=" " alt="" coords="564,157,687,184"/>
+<area shape="poly" title=" " alt="" coords="513,31,608,145,602,145,511,36"/>
+<area shape="rect" href="scanner_8hpp.html" title=" " alt="" coords="712,157,811,184"/>
+<area shape="poly" title=" " alt="" coords="524,31,728,148,723,149,523,36"/>
+<area shape="rect" href="duplicate__finder_8hpp.html" title=" " alt="" coords="950,81,1103,109"/>
+<area shape="poly" title=" " alt="" coords="580,29,937,80,933,82,580,34"/>
+<area shape="rect" title=" " alt="" coords="766,384,824,411"/>
+<area shape="poly" title=" " alt="" coords="373,331,386,333,590,366,753,391,748,391,589,371,385,338,373,336"/>
+<area shape="rect" title=" " alt="" coords="447,384,521,411"/>
+<area shape="poly" title=" " alt="" coords="355,334,445,377,440,377,354,339"/>
+<area shape="rect" title=" " alt="" coords="546,384,620,411"/>
+<area shape="poly" title=" " alt="" coords="373,334,534,381,528,382,372,339"/>
+<area shape="rect" title=" " alt="" coords="5,384,75,411"/>
+<area shape="poly" title=" " alt="" coords="281,337,91,385,89,380,280,332"/>
+<area shape="rect" title=" " alt="" coords="99,384,208,411"/>
+<area shape="poly" title=" " alt="" coords="298,336,199,380,197,375,293,337"/>
+<area shape="rect" title=" " alt="" coords="231,384,422,411"/>
+<area shape="poly" title=" " alt="" coords="329,334,329,370,325,366,325,338"/>
+<area shape="poly" title=" " alt="" coords="598,260,516,303,514,298,593,261"/>
+<area shape="poly" title=" " alt="" coords="568,256,439,278,272,310,271,305,438,273,573,254"/>
+<area shape="poly" title=" " alt="" coords="567,261,389,308,387,303,573,260"/>
+<area shape="poly" title=" " alt="" coords="673,254,725,273,750,287,771,306,788,336,795,370,791,367,783,338,767,310,747,292,722,277,672,259"/>
+<area shape="rect" title=" " alt="" coords="882,308,944,336"/>
+<area shape="poly" title=" " alt="" coords="673,258,870,309,864,309,672,263"/>
+<area shape="rect" title=" " alt="" coords="579,308,664,336"/>
+<area shape="poly" title=" " alt="" coords="623,259,623,294,619,291,620,263"/>
+<area shape="rect" title=" " alt="" coords="994,308,1059,336"/>
+<area shape="poly" title=" " alt="" coords="672,254,982,311,976,312,672,259"/>
+<area shape="rect" title=" " alt="" coords="688,308,757,336"/>
+<area shape="poly" title=" " alt="" coords="640,258,695,299,690,298,639,263"/>
+<area shape="poly" title=" " alt="" coords="626,183,625,218,621,215,623,187"/>
+<area shape="poly" title=" " alt="" coords="709,184,626,209,587,222,560,235,524,264,495,298,492,293,520,261,557,230,585,217,624,204,714,183"/>
+<area shape="poly" title=" " alt="" coords="762,183,763,219,769,259,776,273,784,282,792,292,799,307,800,322,799,336,797,370,793,366,793,336,795,322,793,309,787,295,780,286,771,276,764,261,757,219,759,187"/>
+<area shape="poly" title=" " alt="" coords="739,184,661,227,659,222,734,186"/>
+<area shape="poly" title=" " alt="" coords="763,183,770,221,778,240,789,258,806,275,826,288,870,309,865,309,823,293,803,279,785,262,773,243,765,222,760,187"/>
+<area shape="poly" title=" " alt="" coords="811,176,920,197,970,212,1003,230,1014,244,1021,260,1028,294,1023,291,1016,262,1009,247,1000,234,968,217,919,202,811,181"/>
+<area shape="rect" title=" " alt="" coords="864,232,990,260"/>
+<area shape="poly" title=" " alt="" coords="791,182,886,226,881,226,791,188"/>
+<area shape="rect" title=" " alt="" coords="798,232,839,260"/>
+<area shape="poly" title=" " alt="" coords="773,182,802,221,797,219,771,187"/>
+<area shape="rect" title=" " alt="" coords="1064,232,1149,260"/>
+<area shape="poly" title=" " alt="" coords="812,180,1052,232,1047,233,811,185"/>
+<area shape="poly" title=" " alt="" coords="1052,107,1098,134,1144,172,1162,193,1173,216,1174,239,1163,262,1138,272,1085,285,960,313,959,308,1084,280,1136,267,1160,258,1169,238,1168,217,1157,196,1140,175,1095,139,1052,112"/>
+<area shape="poly" title=" " alt="" coords="1103,99,1132,106,1161,117,1186,133,1207,155,1223,182,1228,208,1223,234,1207,262,1180,288,1146,306,1109,316,1075,322,1075,316,1108,311,1144,301,1177,284,1203,258,1218,232,1223,208,1218,184,1203,158,1183,137,1158,122,1131,111,1103,105"/>
+<area shape="poly" title=" " alt="" coords="952,110,703,158,701,153,957,108"/>
+<area shape="poly" title=" " alt="" coords="1042,107,1064,128,1084,155,1097,187,1104,219,1100,216,1092,188,1079,158,1060,132,1041,112"/>
+<area shape="rect" title=" " alt="" coords="910,157,960,184"/>
+<area shape="poly" title=" " alt="" coords="1013,108,964,149,961,145,1008,110"/>
+<area shape="rect" title=" " alt="" coords="984,157,1069,184"/>
+<area shape="poly" title=" " alt="" coords="1028,107,1029,143,1025,139,1025,111"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af119998f1b55ce04a25ecbe7645e2e7d" id="r_af119998f1b55ce04a25ecbe7645e2e7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af119998f1b55ce04a25ecbe7645e2e7d">TEST</a> (HasherTest, Crc32)</td></tr>
+<tr class="memitem:ae494e358687d9785e2902ec4e8efe653" id="r_ae494e358687d9785e2902ec4e8efe653"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae494e358687d9785e2902ec4e8efe653">TEST</a> (HashTest, Md5Length)</td></tr>
+<tr class="memitem:a261bb8169f48e7cfc30f6536f38ce9f3" id="r_a261bb8169f48e7cfc30f6536f38ce9f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a261bb8169f48e7cfc30f6536f38ce9f3">TEST_F</a> (BayanTest, FileInfoLazyLoading)</td></tr>
+<tr class="memitem:a514f193a9ffb0ec3796c03e8e3b1e0c5" id="r_a514f193a9ffb0ec3796c03e8e3b1e0c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a514f193a9ffb0ec3796c03e8e3b1e0c5">TEST_F</a> (BayanTest, ZeroPadding)</td></tr>
+<tr class="memitem:a7ef4f7618aba6e69e3e202221f66932c" id="r_a7ef4f7618aba6e69e3e202221f66932c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ef4f7618aba6e69e3e202221f66932c">TEST_F</a> (BayanTest, Comparator)</td></tr>
+<tr class="memitem:a1d38b007df4374b116799389884ac28c" id="r_a1d38b007df4374b116799389884ac28c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d38b007df4374b116799389884ac28c">TEST_F</a> (BayanTest, <a class="el" href="classDuplicateFinder.html">DuplicateFinder</a>)</td></tr>
+<tr class="memitem:aaf8df1b740da36a95b78d44d90d37b34" id="r_aaf8df1b740da36a95b78d44d90d37b34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf8df1b740da36a95b78d44d90d37b34">TEST_F</a> (BayanTest, ScannerFilters)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="af119998f1b55ce04a25ecbe7645e2e7d" name="af119998f1b55ce04a25ecbe7645e2e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af119998f1b55ce04a25ecbe7645e2e7d">&#9670;&#160;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">HasherTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Crc32</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae494e358687d9785e2902ec4e8efe653" name="ae494e358687d9785e2902ec4e8efe653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae494e358687d9785e2902ec4e8efe653">&#9670;&#160;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">HashTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Md5Length</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ef4f7618aba6e69e3e202221f66932c" name="a7ef4f7618aba6e69e3e202221f66932c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef4f7618aba6e69e3e202221f66932c">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype">BayanTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Comparator</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d38b007df4374b116799389884ac28c" name="a1d38b007df4374b116799389884ac28c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d38b007df4374b116799389884ac28c">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype">BayanTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDuplicateFinder.html">DuplicateFinder</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a261bb8169f48e7cfc30f6536f38ce9f3" name="a261bb8169f48e7cfc30f6536f38ce9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261bb8169f48e7cfc30f6536f38ce9f3">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype">BayanTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileInfoLazyLoading</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf8df1b740da36a95b78d44d90d37b34" name="aaf8df1b740da36a95b78d44d90d37b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8df1b740da36a95b78d44d90d37b34">&#9670;&#160;</a></span>TEST_F() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype">BayanTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ScannerFilters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a514f193a9ffb0ec3796c03e8e3b1e0c5" name="a514f193a9ffb0ec3796c03e8e3b1e0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514f193a9ffb0ec3796c03e8e3b1e0c5">&#9670;&#160;</a></span>TEST_F() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype">BayanTest</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ZeroPadding</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

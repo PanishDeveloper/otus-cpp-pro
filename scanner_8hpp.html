@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulk: include/scanner.hpp File Reference</title>
+<title>bayan: include/scanner.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bulk
+   <div id="projectname">bayan
    </div>
   </td>
  </tr>
@@ -91,8 +91,81 @@ $(function(){initNavTree('scanner_8hpp.html','',''); });
   <div class="headertitle"><div class="title">scanner.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;boost/filesystem.hpp&gt;</code><br />
+<code>#include &lt;boost/regex.hpp&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="file__info_8hpp_source.html">file_info.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for scanner.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="scanner_8hpp__incl.png" border="0" usemap="#ainclude_2scanner_8hpp" loading="lazy" alt=""/></div>
+<map name="ainclude_2scanner_8hpp" id="ainclude_2scanner_8hpp">
+<area shape="rect" title=" " alt="" coords="340,5,491,33"/>
+<area shape="rect" title=" " alt="" coords="23,157,181,184"/>
+<area shape="poly" title=" " alt="" coords="382,35,278,83,142,152,139,147,276,79,387,32"/>
+<area shape="rect" title=" " alt="" coords="496,81,623,109"/>
+<area shape="poly" title=" " alt="" coords="442,31,523,73,518,74,441,36"/>
+<area shape="rect" title=" " alt="" coords="204,157,267,184"/>
+<area shape="poly" title=" " alt="" coords="384,35,349,56,311,83,279,114,254,146,251,142,275,111,307,79,347,52,388,32"/>
+<area shape="rect" title=" " alt="" coords="647,81,688,109"/>
+<area shape="poly" title=" " alt="" coords="468,31,635,80,629,81,468,36"/>
+<area shape="rect" title=" " alt="" coords="712,81,796,109"/>
+<area shape="poly" title=" " alt="" coords="479,31,699,79,694,81,479,36"/>
+<area shape="rect" title=" " alt="" coords="17,232,75,260"/>
+<area shape="poly" title=" " alt="" coords="338,22,259,32,214,41,169,54,124,71,82,94,45,123,14,158,8,173,10,188,27,220,22,221,5,190,3,172,9,155,41,119,79,89,122,66,167,49,213,36,259,27,342,20"/>
+<area shape="rect" title=" " alt="" coords="756,157,821,184"/>
+<area shape="poly" title=" " alt="" coords="422,31,448,70,465,90,486,106,520,124,550,135,606,143,667,144,744,156,738,156,666,150,606,148,549,140,518,129,483,111,462,94,443,73,421,36"/>
+<area shape="rect" href="file__info_8hpp.html" title=" " alt="" coords="321,81,422,109"/>
+<area shape="poly" title=" " alt="" coords="410,32,389,69,385,66,406,35"/>
+<area shape="poly" title=" " alt="" coords="322,111,166,155,164,150,325,107"/>
+<area shape="poly" title=" " alt="" coords="350,108,274,151,272,147,345,110"/>
+<area shape="poly" title=" " alt="" coords="364,108,329,149,306,169,279,187,231,208,189,218,146,224,91,234,90,229,145,218,188,212,229,203,277,182,302,165,325,145,359,110"/>
+<area shape="poly" title=" " alt="" coords="422,103,441,106,590,127,657,137,744,156,738,156,656,142,590,133,440,111,423,108"/>
+<area shape="rect" title=" " alt="" coords="458,157,530,184"/>
+<area shape="poly" title=" " alt="" coords="394,107,462,148,457,148,393,112"/>
+<area shape="rect" title=" " alt="" coords="554,157,639,184"/>
+<area shape="poly" title=" " alt="" coords="412,107,545,151,540,152,411,112"/>
+<area shape="rect" title=" " alt="" coords="664,157,732,184"/>
+<area shape="poly" title=" " alt="" coords="423,104,652,155,647,157,423,109"/>
+<area shape="rect" href="hasher_8hpp.html" title=" " alt="" coords="341,157,434,184"/>
+<area shape="poly" title=" " alt="" coords="376,107,384,143,379,140,373,111"/>
+<area shape="poly" title=" " alt="" coords="341,184,91,235,90,229,341,178"/>
+<area shape="rect" title=" " alt="" coords="448,232,522,260"/>
+<area shape="poly" title=" " alt="" coords="406,182,458,223,453,223,404,187"/>
+<area shape="rect" title=" " alt="" coords="546,232,621,260"/>
+<area shape="poly" title=" " alt="" coords="423,182,537,227,532,227,422,188"/>
+<area shape="rect" title=" " alt="" coords="645,232,714,260"/>
+<area shape="poly" title=" " alt="" coords="434,180,632,231,627,232,434,186"/>
+<area shape="rect" title=" " alt="" coords="100,232,208,260"/>
+<area shape="poly" title=" " alt="" coords="348,185,211,230,209,225,343,185"/>
+<area shape="rect" title=" " alt="" coords="232,232,423,260"/>
+<area shape="poly" title=" " alt="" coords="379,184,349,222,346,218,374,186"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="scanner_8hpp__dep__incl.png" border="0" usemap="#ainclude_2scanner_8hppdep" loading="lazy" alt=""/></div>
+<map name="ainclude_2scanner_8hppdep" id="ainclude_2scanner_8hppdep">
+<area shape="rect" title=" " alt="" coords="60,5,210,33"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,81,110,109"/>
+<area shape="poly" title=" " alt="" coords="113,43,73,83,70,78,107,44"/>
+<area shape="rect" href="test__bayan_8cpp.html" title=" " alt="" coords="134,81,290,109"/>
+<area shape="poly" title=" " alt="" coords="161,41,201,81,196,81,159,46"/>
+</map>
+</div>
+</div>
 <p><a href="scanner_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:ScanOptions" id="r_ScanOptions"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structScanOptions.html">ScanOptions</a></td></tr>
+<tr class="memitem:Scanner" id="r_Scanner"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScanner.html">Scanner</a></td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

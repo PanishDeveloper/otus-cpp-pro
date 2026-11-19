@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filesink_0',['FileSink',['../classbulk_1_1FileSink.html',1,'bulk']]]
+  ['filecomparator_0',['FileComparator',['../classFileComparator.html',1,'']]],
+  ['fileinfo_1',['FileInfo',['../classFileInfo.html',1,'']]]
 ];

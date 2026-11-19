@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulk: include/hasher.hpp File Reference</title>
+<title>bayan: include/hasher.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bulk
+   <div id="projectname">bayan
    </div>
   </td>
  </tr>
@@ -91,8 +91,67 @@ $(function(){initNavTree('hasher_8hpp.html','',''); });
   <div class="headertitle"><div class="title">hasher.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;boost/crc.hpp&gt;</code><br />
+<code>#include &lt;boost/uuid/detail/md5.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for hasher.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="hasher_8hpp__incl.png" border="0" usemap="#ainclude_2hasher_8hpp" loading="lazy" alt=""/></div>
+<map name="ainclude_2hasher_8hpp" id="ainclude_2hasher_8hpp">
+<area shape="rect" title=" " alt="" coords="200,5,344,33"/>
+<area shape="rect" title=" " alt="" coords="5,81,64,109"/>
+<area shape="poly" title=" " alt="" coords="230,36,79,83,78,77,229,31"/>
+<area shape="rect" title=" " alt="" coords="88,81,162,109"/>
+<area shape="poly" title=" " alt="" coords="248,33,166,76,164,71,243,34"/>
+<area shape="rect" title=" " alt="" coords="187,81,261,109"/>
+<area shape="poly" title=" " alt="" coords="266,32,242,70,239,66,261,35"/>
+<area shape="rect" title=" " alt="" coords="285,81,354,109"/>
+<area shape="poly" title=" " alt="" coords="282,31,306,69,301,67,279,36"/>
+<area shape="rect" title=" " alt="" coords="379,81,487,109"/>
+<area shape="poly" title=" " alt="" coords="301,31,394,74,388,75,300,36"/>
+<area shape="rect" title=" " alt="" coords="511,81,702,109"/>
+<area shape="poly" title=" " alt="" coords="332,31,534,76,529,78,332,36"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="hasher_8hpp__dep__incl.png" border="0" usemap="#ainclude_2hasher_8hppdep" loading="lazy" alt=""/></div>
+<map name="ainclude_2hasher_8hppdep" id="ainclude_2hasher_8hppdep">
+<area shape="rect" title=" " alt="" coords="258,5,401,33"/>
+<area shape="rect" href="file__info_8hpp.html" title=" " alt="" coords="253,81,406,109"/>
+<area shape="poly" title=" " alt="" coords="331,46,332,82,327,80,328,51"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="44,308,148,336"/>
+<area shape="poly" title=" " alt="" coords="271,41,209,69,135,109,99,135,65,164,36,197,12,233,8,244,9,254,22,274,43,291,68,306,63,308,40,296,18,278,4,256,3,244,7,231,32,194,62,160,96,131,132,105,207,64,275,37"/>
+<area shape="rect" href="test__bayan_8cpp.html" title=" " alt="" coords="358,308,514,336"/>
+<area shape="poly" title=" " alt="" coords="369,38,396,57,420,79,442,115,455,156,470,207,472,231,468,261,459,287,446,310,443,306,454,285,463,259,467,231,465,208,450,157,437,117,415,83,393,61,369,44"/>
+<area shape="rect" href="comparator_8hpp.html" title=" " alt="" coords="242,157,417,184"/>
+<area shape="poly" title=" " alt="" coords="331,122,332,157,327,155,328,127"/>
+<area shape="poly" title=" " alt="" coords="380,113,408,131,430,155,440,175,446,196,450,239,447,279,441,310,438,306,442,278,445,239,441,197,435,177,426,158,405,135,380,118"/>
+<area shape="rect" href="scanner_8hpp.html" title=" " alt="" coords="21,232,171,260"/>
+<area shape="poly" title=" " alt="" coords="293,119,232,159,117,234,114,230,229,154,297,115"/>
+<area shape="rect" href="duplicate__finder_8hpp.html" title=" " alt="" coords="196,232,399,260"/>
+<area shape="poly" title=" " alt="" coords="320,197,305,234,301,230,316,200"/>
+<area shape="poly" title=" " alt="" coords="369,190,393,209,413,231,424,250,431,271,437,309,433,306,426,272,419,252,409,234,389,212,367,196"/>
+<area shape="poly" title=" " alt="" coords="250,266,133,310,131,305,245,265"/>
+<area shape="poly" title=" " alt="" coords="336,265,414,308,409,307,335,270"/>
+<area shape="poly" title=" " alt="" coords="98,274,99,309,94,307,94,278"/>
+<area shape="poly" title=" " alt="" coords="173,261,377,305,373,309,172,267"/>
+</map>
+</div>
+</div>
 <p><a href="hasher_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:IHasher" id="r_IHasher"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIHasher.html">IHasher</a></td></tr>
+<tr class="memitem:Crc32Hasher" id="r_Crc32Hasher"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCrc32Hasher.html">Crc32Hasher</a></td></tr>
+<tr class="memitem:Md5Hasher" id="r_Md5Hasher"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMd5Hasher.html">Md5Hasher</a></td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

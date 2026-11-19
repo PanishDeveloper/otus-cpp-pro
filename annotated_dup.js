@@ -1,13 +1,11 @@
 var annotated_dup =
 [
-    [ "bulk", "namespacebulk.html", [
-      [ "Block", "classbulk_1_1Block.html", "classbulk_1_1Block" ],
-      [ "BlockSink", "classbulk_1_1BlockSink.html", "classbulk_1_1BlockSink" ],
-      [ "BulkProcessor", "classbulk_1_1BulkProcessor.html", "classbulk_1_1BulkProcessor" ],
-      [ "Clock", "classbulk_1_1Clock.html", "classbulk_1_1Clock" ],
-      [ "SystemClock", "classbulk_1_1SystemClock.html", "classbulk_1_1SystemClock" ],
-      [ "ConsoleSink", "classbulk_1_1ConsoleSink.html", "classbulk_1_1ConsoleSink" ],
-      [ "FileSink", "classbulk_1_1FileSink.html", "classbulk_1_1FileSink" ],
-      [ "NetworkSink", "classbulk_1_1NetworkSink.html", "classbulk_1_1NetworkSink" ]
-    ] ]
+    [ "Crc32Hasher", "classCrc32Hasher.html", "classCrc32Hasher" ],
+    [ "DuplicateFinder", "classDuplicateFinder.html", null ],
+    [ "FileComparator", "classFileComparator.html", null ],
+    [ "FileInfo", "classFileInfo.html", "classFileInfo" ],
+    [ "IHasher", "classIHasher.html", "classIHasher" ],
+    [ "Md5Hasher", "classMd5Hasher.html", "classMd5Hasher" ],
+    [ "Scanner", "classScanner.html", "classScanner" ],
+    [ "ScanOptions", "structScanOptions.html", "structScanOptions" ]
 ];

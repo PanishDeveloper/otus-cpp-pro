@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['duplicate_5ffinder_2ehpp_0',['duplicate_finder.hpp',['../duplicate__finder_8hpp.html',1,'']]]
+  ['file_5finfo_2ehpp_0',['file_info.hpp',['../file__info_8hpp.html',1,'']]]
 ];

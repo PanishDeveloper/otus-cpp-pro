@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sendflags_0',['sendFlags',['../namespacebulk_1_1net.html#ab7ec15fc2fee7d341de58fb9ebb5f343',1,'bulk::net']]]
+  ['exclude_5fdirs_0',['exclude_dirs',['../structScanOptions.html#ae5fd47bb2a17dc3a43e139491633808d',1,'ScanOptions']]]
 ];
