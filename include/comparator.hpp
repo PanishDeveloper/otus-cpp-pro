@@ -1,8 +1,21 @@
-//
-// Created by Кирилл Панишев on 15.11.2026.
-//
+#pragma once
 
-#ifndef BAYAN_COMPARATOR_HPP
-#define BAYAN_COMPARATOR_HPP
+#include "file_info.hpp"
 
-#endif //BAYAN_COMPARATOR_HPP
+class FileComparator
+{
+public:
+    static bool compare(FileInfo& a, FileInfo& b, std::size_t block_size, const IHasher& hasher)
+    {
+        if (a.size != b.size)
+            return false;
+
+        const std::size_t num_blocks = a.blockCount(block_size);
+        for (std::size_t i = 0; i < num_blocks; ++i)
+        {
+            if (a.getBlockHash(i, block_size, hasher) != b.getBlockHash(i, block_size, hasher))
+                return false;
+        }
+        return true;
+    }
+};

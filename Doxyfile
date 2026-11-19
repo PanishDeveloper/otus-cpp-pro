@@ -1,4 +1,4 @@
-PROJECT_NAME     = "bulk"
+PROJECT_NAME     = "bayan"
 OUTPUT_DIRECTORY = docs
 EXTRACT_ALL      = YES
 HAVE_DOT         = YES
