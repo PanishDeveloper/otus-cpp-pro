@@ -93,7 +93,7 @@ $(function(){initNavTree('file__info_8hpp_source.html','',''); });
 <div class="contents">
 <a href="file__info_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;boost/filesystem.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -103,7 +103,7 @@ $(function(){initNavTree('file__info_8hpp_source.html','',''); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="hasher_8hpp.html">hasher.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>fs = boost::filesystem;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>fs = std::filesystem;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classFileInfo.html">   15</a></span><span class="keyword">class </span><a class="code hl_function" href="classFileInfo.html#a48229b5704bab0947625452744d3d7d5">FileInfo</a></div>
@@ -130,7 +130,7 @@ $(function(){initNavTree('file__info_8hpp_source.html','',''); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keyword">const</span> <span class="keyword">auto</span> offset = <span class="keyword">static_cast&lt;</span>std::streamoff<span class="keyword">&gt;</span>(block_idx)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                              * <span class="keyword">static_cast&lt;</span>std::streamoff<span class="keyword">&gt;</span>(block_size);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            file.seekg(offset, std::ios::beg);   <span class="comment">// FIX: убраны лишние скобки</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            file.seekg(offset, std::ios::beg);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            std::string data(block_size, <span class="charliteral">&#39;\0&#39;</span>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
@@ -178,7 +178,7 @@ $(function(){initNavTree('file__info_8hpp_source.html','',''); });
 <div class="ttc" id="aclassFileInfo_html_a7ee3ac43c41f32b19588785f2fa478e7"><div class="ttname"><a href="classFileInfo.html#a7ee3ac43c41f32b19588785f2fa478e7">FileInfo::blockCount</a></div><div class="ttdeci">std::size_t blockCount(std::size_t block_size) const</div><div class="ttdef"><b>Definition</b> file_info.hpp:57</div></div>
 <div class="ttc" id="aclassFileInfo_html_a8f4b1e0c17ae9bc74347407299c9c93a"><div class="ttname"><a href="classFileInfo.html#a8f4b1e0c17ae9bc74347407299c9c93a">FileInfo::path</a></div><div class="ttdeci">fs::path path</div><div class="ttdef"><b>Definition</b> file_info.hpp:68</div></div>
 <div class="ttc" id="aclassFileInfo_html_abdffd89d8cb227c1013ef1c9b4eec582"><div class="ttname"><a href="classFileInfo.html#abdffd89d8cb227c1013ef1c9b4eec582">FileInfo::size</a></div><div class="ttdeci">std::uintmax_t size</div><div class="ttdef"><b>Definition</b> file_info.hpp:69</div></div>
-<div class="ttc" id="aclassIHasher_html"><div class="ttname"><a href="classIHasher.html">IHasher</a></div><div class="ttdef"><b>Definition</b> hasher.hpp:11</div></div>
+<div class="ttc" id="aclassIHasher_html"><div class="ttname"><a href="classIHasher.html">IHasher</a></div><div class="ttdef"><b>Definition</b> hasher.hpp:10</div></div>
 <div class="ttc" id="aclassIHasher_html_a4c7559169a1d148071dc085f016657c1"><div class="ttname"><a href="classIHasher.html#a4c7559169a1d148071dc085f016657c1">IHasher::hash</a></div><div class="ttdeci">virtual std::string hash(const std::string &amp;data) const =0</div></div>
 <div class="ttc" id="ahasher_8hpp_html"><div class="ttname"><a href="hasher_8hpp.html">hasher.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
