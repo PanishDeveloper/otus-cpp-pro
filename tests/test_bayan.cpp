@@ -1,6 +1,9 @@
 #include <gtest/gtest.h>
-#include <boost/filesystem.hpp>
+#include <chrono>
+#include <cstdint>
+#include <filesystem>
 #include <fstream>
+#include <string>
 
 #include "hasher.hpp"
 #include "file_info.hpp"
@@ -8,7 +11,6 @@
 #include "scanner.hpp"
 #include "duplicate_finder.hpp"
 
-namespace fs = boost::filesystem;
 namespace
 {
     class BayanTest : public ::testing::Test
@@ -18,7 +20,9 @@ namespace
 
         void SetUp() override
         {
-            temp_dir = fs::temp_directory_path() / fs::unique_path("bayan_test_%%%%-%%%%-%%%%");
+            temp_dir = fs::temp_directory_path()
+           / ("bayan_test_" + std::to_string(
+                  std::chrono::steady_clock::now().time_since_epoch().count()));
 
             fs::create_directories(temp_dir);
         }
@@ -39,13 +43,15 @@ namespace
 TEST(HasherTest, Crc32)
 {
     Crc32Hasher hasher;
-    EXPECT_EQ(hasher.hash("Hello"), "f7d18982");
+    constexpr std::uint32_t expected = 0xf7d18982u;
+    EXPECT_EQ(hasher.hash("Hello"),
+              std::string(reinterpret_cast<const char*>(&expected), sizeof(expected)));
 }
 
 TEST(HashTest, Md5Length)
 {
     Md5Hasher hasher;
-    EXPECT_EQ(hasher.hash("Hello").length(), 32);
+    EXPECT_EQ(hasher.hash("Hello").size(), 16u);
 }
 
 TEST_F(BayanTest, FileInfoLazyLoading)

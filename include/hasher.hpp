@@ -1,9 +1,8 @@
 #pragma once
 
 #include <string>
-#include <sstream>
-#include <iomanip>
 #include <cstddef>
+#include <cstdint>
 #include <boost/crc.hpp>
 #include <boost/uuid/detail/md5.hpp>
 
@@ -21,11 +20,10 @@ public:
     [[nodiscard]] std::string hash(const std::string& data) const override
     {
         boost::crc_32_type result;
-
         result.process_bytes(data.data(), data.size());
-        std::ostringstream ss;
-        ss << std::hex << std::setw(8) << std::setfill('0') << result.checksum();
-        return ss.str();
+
+        const std::uint32_t crc = result.checksum();
+        return std::string(reinterpret_cast<const char*>(&crc), sizeof(crc));
     }
 };
 
@@ -41,11 +39,6 @@ public:
         boost::uuids::detail::md5::digest_type digest;
         md5.get_digest(digest);
 
-        const auto* bytes = reinterpret_cast<const unsigned char*>(&digest);
-        std::ostringstream ss;
-        for (std::size_t i = 0; i < sizeof(digest); ++i)
-            ss << std::hex << std::setw(2) << std::setfill('0') << static_cast<unsigned>(bytes[i]);
-
-        return ss.str();
+        return std::string(reinterpret_cast<const char*>(&digest), sizeof(digest));
     }
 };

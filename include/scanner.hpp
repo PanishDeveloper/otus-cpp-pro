@@ -1,6 +1,7 @@
 #pragma once
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
+#include <system_error>
 #include <boost/regex.hpp>
 #include <vector>
 #include <set>
@@ -10,7 +11,7 @@
 
 #include "file_info.hpp"
 
-namespace fs = boost::filesystem;
+namespace fs = std::filesystem;
 
 struct ScanOptions
 {
@@ -36,9 +37,12 @@ public:
         for (const auto& dir_str : m_opts.scan_dirs)
         {
             fs::path root(dir_str);
-            if (!fs::exists(root) || !fs::is_directory(root)) continue;
+            {
+                std::error_code chk;
+                if (!fs::is_directory(root, chk) || chk) continue;
+            }
 
-            boost::system::error_code ec;
+            std::error_code ec;
             fs::path canon_root = fs::canonical(root, ec);
             if (ec) continue;
 
@@ -46,7 +50,7 @@ public:
 
             auto add_file = [&](const fs::directory_entry& entry)
             {
-                boost::system::error_code file_ec;
+                std::error_code file_ec;
                 fs::path canon = fs::canonical(entry.path(), file_ec);
                 if (file_ec) return;
 
@@ -55,7 +59,7 @@ public:
 
                 if (!matchesMask(entry.path().filename().string(), regexes)) return;
 
-                boost::system::error_code size_ec;
+                std::error_code size_ec;
                 const auto size = fs::file_size(entry.path(), size_ec);
                 if (size_ec) return;
 
@@ -66,26 +70,28 @@ public:
 
             if (m_opts.depth == 0)
             {
-                boost::system::error_code iter_ec;
+                std::error_code iter_ec;
                 for (fs::directory_iterator it(canon_root, iter_ec), end;
                      it != end && !iter_ec;
                      it.increment(iter_ec))
                 {
-                    if (it->is_regular_file()) add_file(*it);
+                    std::error_code type_ec;
+                    if (it->is_regular_file(type_ec) && !type_ec) add_file(*it);
                 }
             }
             else
             {
-                boost::system::error_code iter_ec;
+                std::error_code iter_ec;
                 for (fs::recursive_directory_iterator it(canon_root, fs::directory_options::skip_permission_denied, iter_ec), end;
                                                          it != end && !iter_ec; it.increment(iter_ec))
                 {
-                    if (it->is_directory())
+                    std::error_code type_ec;
+                    if (it->is_directory(type_ec) && !type_ec)
                     {
                         if (isExcluded(it->path(), excludes)) it.disable_recursion_pending();
                         if (it.depth() >= m_opts.depth) it.disable_recursion_pending();
                     }
-                    else if (it->is_regular_file())
+                    else if (it->is_regular_file(type_ec) && !type_ec)
                     {
                         add_file(*it);
                     }
@@ -102,7 +108,7 @@ private:
         res.reserve(m_opts.exclude_dirs.size());
         for (const auto& ex : m_opts.exclude_dirs)
         {
-            boost::system::error_code ec;
+            std::error_code ec;
             if (fs::exists(ex, ec) && !ec && fs::is_directory(ex, ec) && !ec)
             {
                 fs::path canon = fs::canonical(ex, ec);
@@ -150,7 +156,7 @@ private:
 
     static bool isExcluded(const fs::path& p, const std::vector<fs::path>& excludes)
     {
-        boost::system::error_code ec;
+        std::error_code ec;
         fs::path canon = fs::canonical(p, ec);
         if (ec) return false;
 

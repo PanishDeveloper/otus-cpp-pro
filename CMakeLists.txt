@@ -7,9 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-find_package(Boost QUIET CONFIG COMPONENTS filesystem program_options regex)
+find_package(Boost QUIET CONFIG COMPONENTS program_options regex)
 if(NOT Boost_FOUND)
-    find_package(Boost REQUIRED COMPONENTS filesystem program_options regex)
+    find_package(Boost REQUIRED COMPONENTS program_options regex)
 endif()
 
 option(WITH_GTEST "Build with Google Test" ON)
@@ -18,7 +18,6 @@ option(WITH_GTEST "Build with Google Test" ON)
 add_executable(bayan src/main.cpp)
 target_include_directories(bayan PRIVATE include)
 target_link_libraries(bayan PRIVATE
-        Boost::filesystem
         Boost::program_options
         Boost::regex
 )
@@ -43,7 +42,6 @@ if(WITH_GTEST)
     target_include_directories(test_bayan PRIVATE include)
     target_link_libraries(test_bayan PRIVATE
             GTest::gtest_main
-            Boost::filesystem
             Boost::regex
     )
 

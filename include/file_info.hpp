@@ -1,6 +1,6 @@
 #pragma once
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <fstream>
 #include <vector>
 #include <string>
@@ -10,7 +10,7 @@
 
 #include "hasher.hpp"
 
-namespace fs = boost::filesystem;
+namespace fs = std::filesystem;
 
 class FileInfo
 {
@@ -35,7 +35,7 @@ public:
 
             const auto offset = static_cast<std::streamoff>(block_idx)
                               * static_cast<std::streamoff>(block_size);
-            file.seekg(offset, std::ios::beg);   // FIX: убраны лишние скобки
+            file.seekg(offset, std::ios::beg);
 
             std::string data(block_size, '\0');
 

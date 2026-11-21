@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <exception>
+#include <iostream>
 
 #include "comparator.hpp"
 
@@ -35,7 +36,12 @@ public:
                     {
                         same = FileComparator::compare(group[match[0]], group[i], block_size, hasher);
                     }
-                    catch (const std::exception&) {}
+                    catch (const std::exception& e)
+                    {
+                        std::cerr << "warning: cannot compare "
+                                  << group[match[0]].path << " and " << group[i].path
+                                  << ": " << e.what() << "\n";
+                    }
 
                     if (same)
                     {
